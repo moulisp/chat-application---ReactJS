@@ -13,3 +13,5 @@ After downloading the application, run the below commands to start the applicati
 yarn install
 yarn start
 ```
+
+Then application can be accessed using the link  [http://localhost:8080/](http://localhost:8080/).
