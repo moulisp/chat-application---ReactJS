@@ -1,6 +1,10 @@
 import React from 'react';
 import Message from './Message';
 
+/**
+ * Messages component holding all messages
+ * @param {*} props
+ */
 const Messages = (props) => (
     <ul id="messages-list">
         {props

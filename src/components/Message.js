@@ -1,6 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
+/**
+ * Individual message component
+ */
 const Message = (props) => (
     <li
         className={props.user !== props.message.from

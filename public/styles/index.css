@@ -14,6 +14,9 @@
     overflow: hidden;
 }
 
+
+/* Styles for title and status area - Start */
+
 header {
     height: 2rem;
     color: white;
@@ -35,6 +38,12 @@ header span {
     font-style: italic;
     font-size: .9rem;
 }
+
+
+/* Styles for title and status area  - End */
+
+
+/* Styles for Message content - Start */
 
 section {
     height: 33rem;
@@ -109,6 +118,12 @@ section {
     border-right-color: #FFF;
 }
 
+
+/* Styles for Message content - End */
+
+
+/* Styles for send message area- Start */
+
 footer {
     position: absolute;
     bottom: 0;
@@ -150,3 +165,6 @@ input:focus,
 button:focus {
     outline: none;
 }
+
+
+/* Styles for send message area- End */

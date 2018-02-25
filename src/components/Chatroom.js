@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import Messages from './Messages';
 import SendMessageFrom from './SendMessageForm';
 
+/**
+ * Complete chatroom component
+ * holding header, message content and send message components
+ */
 export default class Chatroom extends React.Component {
     constructor(props) {
         super(props);
 
     };
 
+    /**
+     * send message to server
+     */
     sendMessage = (message) => {
         message = Object.assign(message, {from: this.props.name})
         //Publish message
@@ -16,7 +23,9 @@ export default class Chatroom extends React.Component {
             .props
             .publishMessage(message);
     }
-
+    /**
+     * publish the status to others
+     */
     sendStatus = (statusMessage) => {
         let status = {
             "user": this.props.name,

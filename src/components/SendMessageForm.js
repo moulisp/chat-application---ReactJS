@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 
+/**
+ * Component to handle send message functionality.
+ */
 export default class SendMessageFrom extends React.Component {
 
     constructor(props) {
@@ -8,6 +11,9 @@ export default class SendMessageFrom extends React.Component {
         this.lastTypedTime = new Date(0);
     };
 
+    /**
+     * Handles send message button/form submit
+     */
     onSubmit = (e) => {
         e.preventDefault();
         let error = "";
@@ -27,9 +33,7 @@ export default class SendMessageFrom extends React.Component {
                 .props
                 .sendMessage(sendMessage);
             e.target.elements.inputMessage.value = "";
-
         }
-
     };
 
     onInputChange = (e) => {
@@ -38,31 +42,32 @@ export default class SendMessageFrom extends React.Component {
 
     onInputFoucs = () => {
         this.typingStatus = setInterval(this.refreshTypingStatus, 500);
-        //console.log("test");
     };
+
     componentWillUnmount() {
         clearInterval(this.typingStatus);
     };
 
+    //Get the typying status of the user
     refreshTypingStatus = () => {
         let inputBox = ReactDOM.findDOMNode(this.refs.inputText)
         if (document.activeElement !== inputBox || inputBox.value == '' || ((new Date().getTime() - this.lastTypedTime.getTime()) > 1000)) {
             this
                 .props
                 .sendStatus("");
-            //clearInterval(this.typingStatus);
-
         } else {
             this
                 .props
-                .sendStatus(this.props.user + " is typying...")
+                .sendStatus(this.props.user + " is typing...")
         }
 
     };
+
     onInputBlur = () => {
         clearInterval(this.typingStatus);
         this.refreshTypingStatus();
     };
+
     render() {
         return (
             <div>
