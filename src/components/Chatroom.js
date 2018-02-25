@@ -17,8 +17,9 @@ export default class Chatroom extends React.Component {
      * send message to server
      */
     sendMessage = (message) => {
-        message = Object.assign(message, {from: this.props.name})
-        //Publish message
+        //Fixing for IE
+        message["from"] = this.props.name;
+        //message = Object.assign(message, {from: this.props.name})
         this
             .props
             .publishMessage(message);
