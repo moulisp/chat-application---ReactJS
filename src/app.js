@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MultiChatRoom from './components/MultiChatRoom'
+
+import 'reset-css/reset.css';
+import '../public/styles/index.css';
 
 ReactDOM.render(
-    <p>Lets chat.</p>, document.getElementById('app'));
+    <MultiChatRoom/>, document.getElementById('app'));

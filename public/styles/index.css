@@ -1,0 +1,152 @@
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.chatRoom {
+    width: 25rem;
+    height: 40rem;
+    margin: 3rem;
+    background-color: rgba(179, 179, 179, 0.25);
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    height: 2rem;
+    color: white;
+    text-align: center;
+    background-color: #3A3D46;
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.3);
+    padding: 1rem 0rem;
+    display: block;
+}
+
+header h3 {
+    color: rgb(251, 251, 255);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+header span {
+    color: rgba(230, 230, 231, .8);
+    font-style: italic;
+    font-size: .9rem;
+}
+
+section {
+    height: 33rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.message-title {
+    position: relative;
+    width: 18rem;
+}
+
+.message-creator {
+    width: 12rem;
+    color: #3a3d46;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.message-createdAt {
+    float: right;
+    font-size: .5rem;
+}
+
+.message-body {
+    padding-top: .5rem;
+    overflow: visible;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.25rem;
+}
+
+.othersMessage,
+.ownMessage {
+    float: left;
+    margin: .25rem 1rem;
+    max-width: 18rem;
+    min-height: 3rem;
+    position: relative;
+    background: #FFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: .5rem;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ownMessage {
+    float: right;
+}
+
+.othersMessage:before,
+.ownMessage:after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+    border: solid 15px transparent;
+}
+
+.ownMessage:after {
+    right: -30px;
+    border-left-color: rgb(255, 255, 255);
+}
+
+.othersMessage:before {
+    left: -30px;
+    border-right-color: #FFF;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 3rem;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.25);
+}
+
+.inputTextBox {
+    width: 75%;
+    height: 2rem;
+    margin: 5px;
+    background: transparent;
+    border: 1px solid #3A3D46;
+    border-radius: 5px;
+    padding: 0px 5px;
+    font-size: 1rem;
+}
+
+.submitButton {
+    width: 15%;
+    height: 2rem;
+    border: 1px solid #3A3D46;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3A3D46;
+    ;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
